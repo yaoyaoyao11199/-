@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式电商网站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">E-Shop</h1>
+                
+                <!-- 导航链接 -->
+                <nav class="main-nav">
+                    <a href="index.html" class="active">首页</a>
+                    <a href="login.html">登录</a>
+                    <a href="register.html">注册</a>
+                </nav>
+                
+                <!-- 搜索框 -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="搜索商品...">
+                    <button id="search-btn">搜索</button>
+                    <div id="search-history"></div>
+                </div>
+                
+                <!-- 购物车图标 -->
+                <div class="cart-icon">
+                    <span class="cart-count">0</span>
+                    <div id="cart-dropdown"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 主要内容 -->
+    <main>
+        <div class="container">
+            <!-- 左侧筛选栏 -->
+            <aside class="filter-sidebar">
+                <h2>筛选</h2>
+                
+                <!-- 价格筛选 -->
+                <div class="filter-section">
+                    <h3>价格区间</h3>
+                    <div class="price-filter">
+                        <input type="range" id="price-min" min="0" max="1000" value="0">
+                        <input type="range" id="price-max" min="0" max="1000" value="1000">
+                        <div class="price-range">
+                            <span id="price-min-value">¥0</span>
+                            <span>至</span>
+                            <span id="price-max-value">¥1000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 分类筛选 -->
+                <div class="filter-section">
+                    <h3>商品分类</h3>
+                    <ul class="category-list">
+                        <li class="category-item active" data-category="all">全部</li>
+                        <li class="category-item" data-category="electronics">电子产品</li>
+                        <li class="category-item" data-category="clothing">服装</li>
+                        <li class="category-item" data-category="home">家居</li>
+                        <li class="category-item" data-category="beauty">美妆</li>
+                    </ul>
+                </div>
+            </aside>
+            
+            <!-- 右侧商品展示 -->
+            <section class="products-section">
+                <div class="section-header">
+                    <h2>商品列表</h2>
+                    <div class="sort-options">
+                        <label>排序方式：</label>
+                        <select id="sort-select">
+                            <option value="default">默认</option>
+                            <option value="price-asc">价格从低到高</option>
+                            <option value="price-desc">价格从高到低</option>
+                            <option value="rating">评分</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- 商品网格 -->
+                <div class="products-grid" id="products-grid">
+                    <!-- 商品卡片将通过JavaScript动态生成 -->
+                </div>
+                
+                <!-- 分页 -->
+                <div class="pagination" id="pagination">
+                    <!-- 分页按钮将通过JavaScript动态生成 -->
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>我们是一家专注于提供优质商品的电商平台，致力于为您带来最好的购物体验。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>邮箱：info@eshop.com</p>
+                    <p>电话：123-4567-8910</p>
+                </div>
+                <div class="footer-section">
+                    <h3>服务条款</h3>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">配送信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 E-Shop. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript文件 -->
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

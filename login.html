@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录 - E-Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">E-Shop</h1>
+                
+                <!-- 导航链接 -->
+                <nav class="main-nav">
+                    <a href="index.html">首页</a>
+                    <a href="login.html" class="active">登录</a>
+                    <a href="register.html">注册</a>
+                </nav>
+                
+                <!-- 购物车图标 -->
+                <div class="cart-icon">
+                    <span class="cart-count">0</span>
+                    <div id="cart-dropdown"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- 主要内容 -->
+    <main>
+        <div class="container">
+            <section class="login-section">
+                <div class="login-container">
+                    <h2>用户登录</h2>
+                    <form id="login-form">
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" name="email" required placeholder="请输入您的邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input type="password" id="password" name="password" required placeholder="请输入您的密码">
+                        </div>
+                        <div class="form-options">
+                            <label>
+                                <input type="checkbox" name="remember"> 记住我
+                            </label>
+                            <a href="#" class="forgot-password">忘记密码？</a>
+                        </div>
+                        <button type="submit" class="login-btn">登录</button>
+                        <div class="register-link">
+                            还没有账号？<a href="register.html">立即注册</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>我们是一家专注于提供优质商品的电商平台，致力于为您带来最好的购物体验。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>邮箱：info@eshop.com</p>
+                    <p>电话：123-4567-8910</p>
+                </div>
+                <div class="footer-section">
+                    <h3>服务条款</h3>
+                    <ul>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">配送信息</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 E-Shop. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript文件 -->
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
